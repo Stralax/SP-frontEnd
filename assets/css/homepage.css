@@ -1,17 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Sour Gummy', Arial, sans-serif;
     background-color: #f4f4f4;
-/*     background-image: url("../../images/newspaperGreen.png");*/
+    /* background-image: url("../../images/newspaperGreen.png"); */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 1rem 2rem;
     height: auto;
     z-index: -1;
 }
@@ -19,79 +19,72 @@ body {
 .body {
     color: black;
     padding: 1rem;
-    /* display: flex; */
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 1rem 2rem;
     height: auto;
-    /* max-height: 150rem; */
     background-color: rgba(255, 255, 255);
     z-index: -1;
     border-radius: 15px;
     /* background-image: url("slike/Vector/Background/Backgorund.jpg"); */
 }
 
-.Products h1{
+.Products h1 {
     margin: 0;
     flex-basis: 100%;
 }
 
 .AllProducts a {
-    background-color: rgb(6, 110, 6) !important; /* Consistent green background */
+    background-color: rgb(6, 110, 6) !important;
     outline: lightgreen !important;
     border: none !important;
-    color: white !important; /* White text color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 8px 16px; /* Decrease padding for smaller appearance */
-    font-size: 0.9rem; /* Slightly smaller font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .AllProducts a:hover {
-    background-color: rgb(6, 100, 6) !important; /* Darker green on hover */
-    color: #f8f9fa !important; /* Light text color on hover */
+    background-color: rgb(6, 100, 6) !important;
+    color: #f8f9fa !important;
     border: none !important;
 }
 
 .PageNumber .pagination .page-link {
-    color: green !important; 
+    color: green !important;
 }
 
 .PageNumber .pagination .page-item.active .page-link {
     background-color: green !important;
-    color: white !important; 
-    border-color: green !important; 
+    color: white !important;
+    border-color: green !important;
 }
 
 .PageNumber .pagination .page-link:hover {
-    color: darkgreen !important; 
-    background-color: lightgreen !important; 
+    color: darkgreen !important;
+    background-color: lightgreen !important;
 }
 
 .custom-btn {
-    background-color: rgb(6, 110, 6); /* Consistent green background */
+    background-color: rgb(6, 110, 6);
     border: none;
-    color: white; /* White text color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 8px 16px; /* Decrease padding for smaller appearance */
-    font-size: 0.9rem; /* Slightly smaller font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .custom-btn:hover {
-    background-color: rgb(6, 100, 6); /* Darker green on hover */
-    color: #f8f9fa; /* Light text color on hover */
+    background-color: rgb(6, 100, 6);
+    color: #f8f9fa;
 }
 
 .content {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1.5rem;
+    margin: 1rem 1.5rem;
 }
 
 .Products {
@@ -99,29 +92,25 @@ body {
     padding: 1.69rem;
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-    margin-top: 1rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    margin-bottom: 1rem;
-
+    margin: 1rem 0.25rem;
     width: 100%;
-
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     border-radius: 15px;
     background-image: url("../images/PearBackgroundClasic3.jpg");
 }
 
 .centriraj {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .imgStyle {
-    width: 11rem;
-    height: 11rem;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
 }
 
 @media (max-width: 900px) {
@@ -133,12 +122,12 @@ body {
         flex-wrap: wrap;
     }
 
-    .nasl{
+    .nasl {
         display: flex;
         flex-direction: column;
     }
 
-    .naslov{
+    .naslov {
         width: 100%;
     }
 
@@ -147,17 +136,49 @@ body {
         height: 8rem;
         padding-bottom: 1rem;
     }
+
+    .cardi {
+        width: 45%;
+    }
 }
 
 .cardi {
-
-            
-    width: 15.5rem;
+    width: 18%;
     min-height: 13rem !important;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 1rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardi:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .cardi {
+        width: 22%;
+    }
+}
+
+@media (max-width: 992px) {
+    .cardi {
+        width: 28%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardi {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .cardi {
+        width: 90%;
+    }
 }
 
 .cardi img {
@@ -172,11 +193,11 @@ body {
     justify-content: center;
 }
 
-.card-body .cardi .card{
+.card-body .cardi .card {
     min-height: 20rem !important;
 }
 
-.ProfilePicture{
+.ProfilePicture {
     width: 2.5rem;
     margin-left: 3rem;
     margin-right: 0.5rem;
@@ -185,17 +206,14 @@ body {
 }
 
 .slider {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
     width: 95%;
     height: 500px;
     align-content: center;
     justify-self: center;
 }
 
-.slider img{
+.slider img {
     width: 1400px;
     height: 500px;
     border-style: solid;
@@ -209,7 +227,7 @@ body {
     width: 0;
     height: 0;
     overflow: hidden;
-    opacity: 0; 
+    opacity: 0;
 }
 
 .PageNumber {
@@ -218,31 +236,45 @@ body {
     align-items: center;
 }
 
-.carousel{
-    align-items:center;
+.carousel {
+    align-items: center;
 }
 
 .navbar-brand {
     display: flex;
-    align-items: center; 
-    font-family: "Sour Gummy", sans-serif; /* font */
+    align-items: center;
+    font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400; 
+    font-weight: 400;
     font-style: normal;
-    font-variation-settings: "wdth" 100; 
+    font-variation-settings: "wdth" 100;
 }
 
 .card-body {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .left-aligned {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .me-2 {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
 }

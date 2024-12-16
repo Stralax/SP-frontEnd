@@ -1,34 +1,48 @@
 .navbar {
-    background-color: green!important; /* Green background */
+    background-color: green!important;
     height: 4rem;
-    z-index: 1;
+    z-index: 1000; /* Ensure navbar is on top */
     padding-top: 0px;
     padding-bottom: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning context */
 }
-
-/* #28a745 */
 
 .navbar-toggler {
     background-color: white; 
-    border: 2px solid green; /* Green border */
+    border: 2px solid green;
     border-radius: 5px;
+    padding: 0.25rem 0.75rem; /* Add padding for better spacing */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    outline: none; /* Remove white border on click */
+    z-index: 1001; /* Ensure button is on top */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remove white border on focus */
 }
 
 .navbar-toggler:hover {
-    background-color: green; /* Green background on hover */
+    background-color: green;
+    border-color: #218838; /* Darker green border on hover */
     color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem; /* Increase icon size */
+    height: 1.5rem; /* Increase icon size */
 }
 
 .navbar-brand {
     display: flex;
     align-items: center; 
-    font-family: "Sour Gummy", sans-serif; /* font */
+    font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400; 
     font-style: normal;
     font-variation-settings: "wdth" 100; 
-    color: white; /* White text */
+    color: white;
 }
 
 .navbar-brand .logo {
@@ -37,37 +51,37 @@
 }
 
 .navbar button {
-    background-color: green; /* Green background */
-    border: 2px solid green; /* Green border */
+    background-color: green;
+    border: 2px solid green;
     border-radius: 5px;
-    color: white; /* White text */
+    color: white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 0.5rem;
     transition: background-color 0.3s;
+    z-index: 1001; /* Ensure button is on top */
 }
 
 .navbar button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
     color: white;
 }
 
-
-
 .custom-button {
-    background-color: green; /* Green background */
-    border: 2px solid green; /* Green border */
+    background-color: green;
+    border: 2px solid green;
     border-radius: 5px;
-    color: white !important; /* White text */
+    color: white !important;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-bottom: 0.5rem;
     transition: background-color 0.3s;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    z-index: 1001; /* Ensure button is on top */
 }
 
 .custom-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
     color: white;
 }
 
@@ -79,14 +93,82 @@
     width: 2.5rem;
     background-color: rgb(211, 197, 197);
     border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ProfilePicture:hover {
+    background-color: rgb(180, 180, 180);
+    transform: scale(1.1);
+}
+
+.ProfileIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(211, 197, 197);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ProfileIcon:hover {
+    background-color: rgb(180, 180, 180);
+    transform: scale(1.1);
+}
+
+.nav-link.dropdown-toggle .fa-user-graduate,
+.nav-link.dropdown-toggle .dropdown-arrow::after {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link.dropdown-toggle:hover .fa-user-graduate,
+.nav-link.dropdown-toggle:hover .dropdown-arrow::after {
+    color: rgb(180, 180, 180) !important;
+    transform: scale(1.1);
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 3px solid #fff;
 }
 
 @media (max-width: 992px) {
     .navbar-collapse {
         background-color: white;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        scrollbar-width: thin;
+        scrollbar-color: #ccc #fff;
+    }
+
+    .navbar-collapse::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .navbar-collapse::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+        border: 3px solid #fff;
     }
 
     .slider {
@@ -96,4 +178,40 @@
     .search-div {
         margin-right: 0px;
     }
+
+    .navbar-nav .nav-item .nav-link {
+        background-color: transparent !important;
+        color: green !important;
+        border: none !important;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        background-color: #f4f4f4;
+        color: darkgreen !important;
+    }
+
+    .navbar-nav .nav-item .btn {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar-nav .nav-item .btn:hover {
+        background-color: #218838;
+        color: #f8f9fa;
+    }
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(180, 180, 180) !important;
 }
