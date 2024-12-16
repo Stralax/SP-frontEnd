@@ -1,0 +1,17 @@
+.Footer {
+    background-color: #ECEFF1;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 15px !important;
+}
+
+.socialMedia {
+    background-color: rgba(5, 141, 5, 0.797);
+}
+
+.navbar {
+    background-color: green !important;
+    height: 4rem;
+}

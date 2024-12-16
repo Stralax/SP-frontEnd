@@ -1,0 +1,150 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/newspaperGreen.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box; 
+}
+
+
+.contact-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    z-index: 2; 
+    position: relative; 
+    box-sizing: border-box;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-form input {
+    box-sizing: border-box;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form .submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Media query za manjše zaslone */
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 90%; 
+    }
+
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 16px; 
+    }
+
+    .contact-form h3 {
+        font-size: 16px; 
+    }
+}
+
+/* za landscape mode */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .contact-container {
+        max-width: 90%; /* Širina je nekoliko prilagojena */
+        padding: 15px;  /* Manj paddinga za boljšo prilagoditev na krajše zaslone */
+    }
+
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 14px; /* Manjša pisava, da ustreza krajši višini zaslona */
+    }
+
+    .contact-container h2 {
+        font-size: 18px; /* Zmanjšana velikost naslova za boljšo prilagoditev */
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 14px; /* Prilagojena velikost besedila v landscape načinu */
+    }
+
+    .contact-form h3 {
+        font-size: 16px; /* Prilagoditev velikosti naslova obrazca */
+        margin-bottom: 10px;
+    }
+
+    /* Zmanjšaj padding in margine, da vsebine ne odreže */
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .submit-btn {
+        padding: 8px 15px; /* Manjša velikost gumba za več prostora */
+    }
+}
+

@@ -9,7 +9,7 @@ app.use(express.static('./'));
 
 // Preusmeri vse poti na `index.html` (za Angular router)
 app.get('/*', (req, res) => {
-  res.sendFile(path.join('./'));
+  res.sendFile('./');
 });
 
 // Zaženi strežnik
